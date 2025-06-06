@@ -1,0 +1,1 @@
+module.exports.taskControllers = require('./task.controllers');
