@@ -11,6 +11,21 @@ const taskDB = [
         message: "Task2",
         isDone: false,
     },
+    {
+        id: '3',
+        message: "Task3",
+        isDone: false,
+    },
+    {
+        id: '4',
+        message: "Task4",
+        isDone: false,
+    },
+    {
+        id: '5',
+        message: "Task5",
+        isDone: false,
+    },
 ];
 
 class TaskDB {
@@ -18,8 +33,9 @@ class TaskDB {
         this.task = [...arr];
     };
 
-    getTask() {
-        return [...this.task];
+    getTask(page, results) {
+        // return [...this.task];
+        return [...this.task.slice((page -1) * results, page * results)];
     };
 
     createTask(newTask) {
